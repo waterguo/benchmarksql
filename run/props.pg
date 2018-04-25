@@ -1,0 +1,16 @@
+driver=org.postgresql.Driver
+conn=jdbc:postgresql://localhost:5432/postgres
+user=postgres
+password=password
+
+warehouses=1
+terminals=1
+paymentWeight=43
+orderStatusWeight=4
+deliveryWeight=4
+stockLevelWeight=4
+
+runTxnsPerTerminal=10
+runMins=1
+runMinsBool=false
+
