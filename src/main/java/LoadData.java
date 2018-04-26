@@ -16,6 +16,7 @@
  */
 
 import org.apache.log4j.*;
+import org.apache.log4j.xml.DOMConfigurator;
 
 import java.sql.*;
 import java.util.*;
@@ -54,8 +55,11 @@ public class LoadData implements jTPCCConfig {
   private static long               lastTimeMS    = 0;
 
   public static void main(String[] args) {
-
-      PropertyConfigurator.configure("log4j.xml");
+      if (args.length == 0) {
+          System.out.println("runSQL.sh <property file> numwarehouses <number of warehouses>");
+          return;
+      }
+      DOMConfigurator.configure("log4j.xml");
       log.info("Starting BenchmarkSQL LoadData");
 
       log.info("----------------- Initialization -------------------");

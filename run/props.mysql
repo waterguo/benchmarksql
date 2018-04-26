@@ -1,0 +1,16 @@
+driver=com.mysql.jdbc.Driver
+conn=jdbc:mysql://localhost:3306/benchmarksql?useServerPrepStmts=true
+user=test
+password=password
+
+warehouses=1
+terminals=1
+paymentWeight=43
+orderStatusWeight=4
+deliveryWeight=4
+stockLevelWeight=4
+
+runTxnsPerTerminal=10
+runMins=1
+runMinsBool=false
+

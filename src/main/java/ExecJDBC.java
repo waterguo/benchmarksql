@@ -7,6 +7,7 @@
  */
 
 import org.apache.log4j.*;
+import org.apache.log4j.xml.DOMConfigurator;
 
 import java.io.*;
 import java.sql.*;
@@ -18,8 +19,17 @@ public class ExecJDBC {
   static Logger log = Logger.getLogger(ExecJDBC.class);
   
   public static void main(String[] args) {
+      if (System.getProperty("prop") == null) {
+          System.out.println("runSQL.sh <property file> <script>");
+          return;
+      }
 
-    PropertyConfigurator.configure("log4j.xml");
+      if (System.getProperty("commandFile") == null) {
+          System.out.println("runSQL.sh <property file> <script>");
+          return;
+      }
+
+    DOMConfigurator.configure("log4j.xml");
     log.info("Starting BenchmarkSQL ExecJDBC");
 
     Connection conn = null;

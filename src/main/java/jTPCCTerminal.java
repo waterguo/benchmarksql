@@ -1638,7 +1638,7 @@ public class jTPCCTerminal implements jTPCCConfig, Runnable
     }
 
     private void printMessage(String message) {
-      log.error(message);
+      log.info(message);
     }
 
 

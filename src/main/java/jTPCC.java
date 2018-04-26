@@ -7,7 +7,8 @@
  */
 
 import org.apache.log4j.*;
- 
+import org.apache.log4j.xml.DOMConfigurator;
+
 import java.io.*;
 import java.sql.*;
 import java.util.*;
@@ -56,7 +57,11 @@ public class jTPCC extends JFrame implements jTPCCConfig, ActionListener, Window
     private double tpmC;
 
     public static void main(String args[]) {
-        PropertyConfigurator.configure("log4j.xml");
+        if (System.getProperty("prop") == null) {
+            System.out.println("runBenchmark.sh <property file>");
+            return;
+        }
+        DOMConfigurator.configure("log4j.xml");
         log.info("Starting BenchmarkSQL jTPCC");
         new jTPCC();
     }
@@ -461,7 +466,7 @@ public class jTPCC extends JFrame implements jTPCCConfig, ActionListener, Window
                     }
                     catch(Exception e1)
                     {
-                        log.info("\nThis session ended with errors!");
+                        log.error("\nThis session ended with errors!", e1);
                             printStreamReport.close();
                             fileOutputStream.close();
 
