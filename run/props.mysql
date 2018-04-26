@@ -10,7 +10,7 @@ runTxnsPerTerminal=0
 //To run for specified minutes- runTxnsPerTerminal must equal zero
 runMins=1
 //Number of total transactions per minute
-limitTxnsPerMin=300
+limitTxnsPerMin=0
 
 
 //The following five values must add up to 100

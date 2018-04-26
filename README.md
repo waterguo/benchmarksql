@@ -1,6 +1,6 @@
 # benchmarksql
 
-This is a fork of BenchmarkSQL
+This is a fork of BenchmarkSQL that works with MySQL
 
 Currently the lastest version is 4.1.1
 
