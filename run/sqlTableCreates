@@ -1,5 +1,8 @@
+DROP SCHEMA IF EXISTS benchmarksql CASCADE;
 
-create table warehouse (
+CREATE SCHEMA benchmarksql;
+
+create table benchmarksql.warehouse (
   w_id        integer   not null,
   w_ytd       decimal(12,2),
   w_tax       decimal(4,4),
@@ -11,7 +14,7 @@ create table warehouse (
   w_zip       char(9)
 );
 
-create table district (
+create table benchmarksql.district (
   d_w_id       integer       not null,
   d_id         integer       not null,
   d_ytd        decimal(12,2),
@@ -25,8 +28,7 @@ create table district (
   d_zip        char(9)
 );
 
-
-create table customer (
+create table benchmarksql.customer (
   c_w_id         integer        not null,
   c_d_id         integer        not null,
   c_id           integer        not null,
@@ -50,8 +52,10 @@ create table customer (
   c_data         varchar(500)
 );
 
+create sequence benchmarksql.hist_id_seq;
 
-create table history (
+create table benchmarksql.history (
+  hist_id  integer,
   h_c_id   integer,
   h_c_d_id integer,
   h_c_w_id integer,
@@ -63,7 +67,7 @@ create table history (
 );
 
 
-create table oorder (
+create table benchmarksql.oorder (
   o_w_id       integer      not null,
   o_d_id       integer      not null,
   o_id         integer      not null,
@@ -75,14 +79,14 @@ create table oorder (
 );
 
 
-create table new_order (
+create table benchmarksql.new_order (
   no_w_id  integer   not null,
   no_d_id  integer   not null,
   no_o_id  integer   not null
 );
 
 
-create table order_line (
+create table benchmarksql.order_line (
   ol_w_id         integer   not null,
   ol_d_id         integer   not null,
   ol_o_id         integer   not null,
@@ -96,7 +100,7 @@ create table order_line (
 );
 
 
-create table stock (
+create table benchmarksql.stock (
   s_w_id       integer       not null,
   s_i_id       integer       not null,
   s_quantity   decimal(4,0),
@@ -117,7 +121,7 @@ create table stock (
 );
 
 
-create table item (
+create table benchmarksql.item (
   i_id     integer      not null,
   i_name   varchar(24),
   i_price  decimal(5,2),

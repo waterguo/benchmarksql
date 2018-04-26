@@ -1,8 +1,6 @@
 <project name="BenchmarkSQL" default="dist" basedir=".">
   <description>BenchmarkSQL Build File</description>
 
-  <presetdef name="javac"> <javac includeantruntime="false" /> </presetdef>
-
   <property name="src" location="src"/>
   <property name="build" location="build"/>
   <property name="dist"  location="dist"/>
@@ -22,12 +20,15 @@
   </target>
 
   <target name="compile" depends="init">
-    <javac srcdir="${src}" destdir="${build}" classpathref="classpath"/>
+    <javac srcdir="${src}" destdir="${build}" classpathref="classpath"
+	   debug="true" includeantruntime="false">
+      <compilerarg value="-Xlint:unchecked"/>
+    </javac>
   </target>
 
   <target name="dist" depends="compile" >
     <mkdir dir="${dist}"/>
-    <jar jarfile="${dist}/BenchmarkSQL-3.0.jar" basedir="${build}"/>
+    <jar jarfile="${dist}/BenchmarkSQL-4.1.jar" basedir="${build}"/>
   </target>
 
   <target name="clean" description="clean up" >

@@ -1,18 +1,20 @@
 
-drop table warehouse;
+drop table benchmarksql.warehouse;
 
-drop table item;
+drop table benchmarksql.item;
 
-drop table stock;
+drop table benchmarksql.stock;
 
-drop table district;
+drop table benchmarksql.district;
 
-drop table customer;
+drop table benchmarksql.customer;
 
-drop table oorder;
+drop table benchmarksql.oorder;
 
-drop table order_line;
+drop table benchmarksql.order_line;
 
-drop table history;
+drop table benchmarksql.history;
 
-drop table new_order;
+drop sequence benchmarksql.hist_id_seq;
+
+drop table benchmarksql.new_order;

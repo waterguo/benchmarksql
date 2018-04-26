@@ -1,28 +1,21 @@
 
-alter table warehouse drop constraint pk_warehouse;
+alter table benchmarksql.warehouse drop constraint pk_warehouse;
 
-alter table district drop constraint pk_district;
+alter table benchmarksql.district drop constraint pk_district;
 
-
-alter table customer drop constraint pk_customer;
+alter table benchmarksql.customer drop constraint pk_customer;
 drop index ndx_customer_name;
-
 
 -- history table has no primary key
 -- commit;
 
-
-alter table oorder drop constraint pk_oorder;
+alter table benchmarksql.oorder drop constraint pk_oorder;
 drop index ndx_oorder_carrier;
 
+alter table benchmarksql.new_order drop constraint pk_new_order;
 
-alter table new_order drop constraint pk_new_order;
+alter table benchmarksql.order_line drop constraint pk_order_line;
 
+alter table benchmarksql.stock drop constraint pk_stock;
 
-alter table order_line drop constraint pk_order_line;
-
-
-alter table stock drop constraint pk_stock;
-
-
-alter table item drop constraint pk_item;
+alter table benchmarksql.item drop constraint pk_item;
