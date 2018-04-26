@@ -1,6 +1,9 @@
 *********************************************************************
 Change Log:
 
+Version 4.1.1a 2018-04-26 xgu0
+   - Changes to make it work with MySQL such as libraries config files etc.
+
 Version 4.1.1 2016-01-31 jannicash
    - Changed the status line to update only once per second. The previous
      implementation was getting rather noisy at high throughput.

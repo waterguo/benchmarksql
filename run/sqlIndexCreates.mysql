@@ -29,4 +29,3 @@ alter table benchmarksql.stock add constraint pk_stock
 alter table benchmarksql.item add constraint pk_item
   primary key (i_id);
 
-vacuum analyze;

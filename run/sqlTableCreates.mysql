@@ -1,6 +1,6 @@
-DROP SCHEMA IF EXISTS benchmarksql CASCADE;
+DROP DATABASE IF EXISTS benchmarksql CASCADE;
 
-CREATE SCHEMA benchmarksql;
+CREATE DATABASE benchmarksql;
 
 create table benchmarksql.warehouse (
   w_id        integer   not null,
@@ -51,8 +51,6 @@ create table benchmarksql.customer (
   c_middle       char(2),
   c_data         varchar(500)
 );
-
-create sequence benchmarksql.hist_id_seq;
 
 create table benchmarksql.history (
   hist_id  integer,
