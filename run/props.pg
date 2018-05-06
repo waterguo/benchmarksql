@@ -1,10 +1,10 @@
 driver=org.postgresql.Driver
 conn=jdbc:postgresql://localhost:5432/postgres
-user=benchmarksql
+user=postgres
 password=password
 
-warehouses=1
-terminals=1
+warehouses=100
+terminals=24
 //To run specified transactions per terminal- runMins must equal zero
 runTxnsPerTerminal=0
 //To run for specified minutes- runTxnsPerTerminal must equal zero
