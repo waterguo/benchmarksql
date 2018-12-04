@@ -1,6 +1,6 @@
 # benchmarksql
 
-This is a fork of BenchmarkSQL with additionl scripts and libaraies so that it can run on MySQL.
+This is a fork of BenchmarkSQL with additionl scripts and libaraies so that it can run on PostgreSQL, MySQL and Oracle.
 
 Currently the lastest version is 4.1.1
 
