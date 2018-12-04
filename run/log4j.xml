@@ -49,7 +49,7 @@
 
 
 <root>
-<priority value="trace"/>
+<priority value="info"/>
 <appender-ref ref="console"/>
 <appender-ref ref="R"/>
 <appender-ref ref="E"/>
