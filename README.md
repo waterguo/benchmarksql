@@ -12,8 +12,9 @@ prepare for running
 ------------------------
 0. install ant
 1. use ant compile
-        $ ant
-        
+```
+ $ ant
+```
 Instructions for running
 ------------------------
 Use of JDK7 is required.   Sample JDBC Connection Property files are provided as follows:
