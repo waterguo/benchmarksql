@@ -6,7 +6,7 @@ Currently the lastest version is 4.1.1
 
 There is also a fork of 3.0.9 with MySQL support in the history
 
-## how to run
+# how to run
 
 Instructions for running
 ------------------------
