@@ -8,6 +8,12 @@ There is also a fork of 3.0.9 with MySQL support in the history
 
 # how to run
 
+prepare for running
+------------------------
+0. install ant
+1. use ant compile
+        $ ant
+        
 Instructions for running
 ------------------------
 Use of JDK7 is required.   Sample JDBC Connection Property files are provided as follows:
